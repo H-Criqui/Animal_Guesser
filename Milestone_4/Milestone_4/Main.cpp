@@ -37,5 +37,17 @@ int main()
 		cout << "Think of an animal." << endl;
 		run(start, guessed);
 	}
+
+	fin.close();
+	ofstream fout;
+	fout.open("heap1.txt");
+	int counter = 0;
+	vector<string> file = Deconstructor(StartNode, 0);
+	while (counter < file.size())
+	{
+		fout << file[counter] << endl;
+		counter++;
+	}
+
 	return 0;
 }

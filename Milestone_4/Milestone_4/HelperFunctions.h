@@ -61,3 +61,55 @@ void run(Node* x, bool &guessed )
 		}
 	}
 }
+
+int maxSize(int depth)
+{
+	int n = 0;
+	int counter = 0;
+	while (counter < depth)
+	{
+		n += (n + 1);
+		counter++;
+	}
+}
+
+int maxDepth(Node* top) 
+{
+	if (top == NULL)
+	{
+		return 0;
+	}
+	else
+	{
+		/* compute the depth of each subtree */
+		int lDepth = maxDepth(top->left);
+		int rDepth = maxDepth(top->right);
+
+		/* use the larger one */
+		if (lDepth > rDepth)
+		{
+			return(lDepth + 1);
+		}
+		else
+		{
+			return(rDepth + 1);
+		}
+	}
+}
+
+vector<string> Deconstructor(Node* start, int i)
+{
+	vector<string> result{maxSize(maxDepth(start))};
+	if (start == NULL)
+	{
+		result[i] = ""; 
+		return result;
+	}
+	else
+	{
+		result[i] = start->value;
+		Deconstructor(start->left, (2*i + 1));
+		Deconstructor(start->right, (2*i + 2));
+	}
+
+}
