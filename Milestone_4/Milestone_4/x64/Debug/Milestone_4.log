@@ -1,2 +1,3 @@
 ﻿  Main.cpp
-C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\HelperFunctions.h(102,31): error C2398:  Element '1': conversion from 'int' to 'const unsigned __int64' requires a narrowing conversion
+C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\Main.cpp(46,11): warning C4244:  'initializing': conversion from 'double' to 'int', possible loss of data
+  Milestone_4.vcxproj -> C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\x64\Debug\Milestone_4.exe

@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <cmath>
 #include "HeapConstructor.h"
 #include "HelperFunctions.h"
 using namespace std;
@@ -42,10 +43,13 @@ int main()
 	ofstream fout;
 	fout.open("heap1.txt");
 	int counter = 0;
-	vector<string> file = Deconstructor(StartNode, 0);
-	while (counter < file.size())
+	int size = pow(2, maxDepth(start));
+	vector<string> result{};
+	result.resize(size);
+	Deconstructor(StartNode->right, 0, result);
+	while (counter < result.size())
 	{
-		fout << file[counter] << endl;
+		fout << result[counter] << endl;
 		counter++;
 	}
 

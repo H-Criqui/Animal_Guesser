@@ -68,9 +68,10 @@ int maxSize(int depth)
 	int counter = 0;
 	while (counter < depth)
 	{
-		n += (n + 1);
+		n += (counter + 1);
 		counter++;
 	}
+	return n;
 }
 
 int maxDepth(Node* top) 
@@ -97,19 +98,28 @@ int maxDepth(Node* top)
 	}
 }
 
-vector<string> Deconstructor(Node* start, int i)
+void allocate(vector<string>& vect, int size)
 {
-	vector<string> result{maxSize(maxDepth(start))};
-	if (start == NULL)
+	while (vect.size() < size)
 	{
-		result[i] = ""; 
-		return result;
+		vect.push_back("");
 	}
-	else
-	{
-		result[i] = start->value;
-		Deconstructor(start->left, (2*i + 1));
-		Deconstructor(start->right, (2*i + 2));
-	}
+}
 
+void Deconstructor(Node* start, int i, vector<string>& result)
+{
+	if (result.size() > i)
+	{
+		if (start == NULL)
+		{
+			result[i] = "";
+
+		}
+		else
+		{
+			result[i] = start->value;
+			Deconstructor(start->left, (2 * i + 1), result);
+			Deconstructor(start->right, (2 * i + 2), result);
+		}
+	}
 }

@@ -1,5 +1,5 @@
 ﻿  Main.cpp
 C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\HeapConstructor.h(18,8): warning C4018:  '<': signed/unsigned mismatch
 C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\HelperFunctions.h(11,11): warning C4018:  '>': signed/unsigned mismatch
-C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\HelperFunctions.h(102,31): error C2398:  Element '1': conversion from 'int' to 'const unsigned int' requires a narrowing conversion
+C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\HelperFunctions.h(103,24): error C2398:  Element '1': conversion from 'int' to 'const unsigned int' requires a narrowing conversion
 C:\Users\nopassword\Desktop\Animal_Guesser\Milestone_4\Milestone_4\Main.cpp(46,17): warning C4018:  '<': signed/unsigned mismatch
